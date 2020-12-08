@@ -12,8 +12,16 @@
 							</content>
 						</Panel>
 						<Panel headerText="{i18n>listTitle}" class="sapUiResponsiveMargin" width="auto">
-							<List headerText="Products" items="{ path: 'productsModel>/ProductCollection' }">
-								<StandardListItem title="{productsModel>Name}" counter="{productsModel>Quantity}" />
+							<List id="ProductList"
+								  headerText="Products" 
+								  items="{ path: 'productsModel>/ProductCollection' }"
+								  mode="MultiSelect"
+								  includeItemInSelection="true">
+								<StandardListItem title="{productsModel>Name}"
+											      description="{productsModel>ProductId}"
+											      icon="{productsModel>ProductPicUrl}"
+											      iconDensityAware="false"
+											      iconInset="false"/>
 							</List>
 						</Panel>
 					</content>

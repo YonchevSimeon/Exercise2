@@ -16,6 +16,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 				var productsModel = this.getView().getModel("productsModel");
 			},
+				handleSelectChange: function (oEvent) {
+				var mode = oEvent.getParameter("selectedItem").getKey();
+				this.byId("ProductList").setMode(mode);
+			},
 			onOpenDialog: function () {
 				var oView = this.getView();
 				if (!this.pDialog) {

@@ -13,6 +13,8 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				};
 				var model = new JSONModel(data);
 				this.getView().setModel(model);
+
+				var productsModel = this.getView().getModel("productsModel");
 			},
 			onOpenDialog: function () {
 				var oView = this.getView();

@@ -11,6 +11,11 @@
 								<FormattedText htmlText="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
 							</content>
 						</Panel>
+						<Panel headerText="{i18n>listTitle}" class="sapUiResponsiveMargin" width="auto">
+							<List headerText="Products" items="{ path: 'productsModel>/ProductCollection' }">
+								<StandardListItem title="{productsModel>Name}" counter="{productsModel>Quantity}" />
+							</List>
+						</Panel>
 					</content>
 				</Page>
 			</pages>
